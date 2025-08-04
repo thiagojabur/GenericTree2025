@@ -4,15 +4,19 @@ public class Start {
 	public static void main(String[] args) {
 		Node raiz = new Node("Ana");
 		Node lorenzo = new Node("Lorenzo");
+		Node gabriel = new Node("Gabriel");
+		Node bruno = new Node("Bruno");
 		GenericTree arvoreExemplo 
 		= new GenericTree(raiz);
 		
 		raiz.addChild(lorenzo);
+		raiz.addChild(gabriel);
 		
-		System.out.println("Ana é nó interno? " + raiz.isInternal());
-		System.out.println("Ana é nó externo? " + raiz.isExternal());
-		System.out.println("Lorenzo é nó interno? " + lorenzo.isInternal());
-		System.out.println("Lozenzo é nó externo? " + lorenzo.isExternal());
-		System.out.println("Pai do Lorenzo?" + lorenzo.getDadNode());
+		lorenzo.addChild(bruno);
+		lorenzo.addChild(new Node("Ricardo"));
+		
+		gabriel.addChild(new Node("Matheus"));
+		
+		arvoreExemplo.printPreOrder();
 	}
 }
