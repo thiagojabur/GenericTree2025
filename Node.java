@@ -4,6 +4,17 @@ public class Node {
 	Node dadNode;
 	ArrayList<Node> children = new ArrayList<>();
 
+	
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
+	public ArrayList<Node> getChildren() {
+		return children;
+	}
+
 	public Node(String data) {
 		this.data = data;
 	}
